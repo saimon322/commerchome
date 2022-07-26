@@ -1,0 +1,156 @@
+.header {
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  transition: .3s;
+
+  @include media-up(md) {
+    height: 100px;
+  }
+
+  @include media-up(lg) {
+    height: 134px;
+  }
+
+  .page-scrolled & {
+    height: 50px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+
+    @include media-up(md) {
+      height: 70px;
+    }
+
+    @include media-up(lg) {
+      height: 90px;
+    }
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 101;
+    display: block;
+    height: 100%;
+    margin-left: -16px;
+
+    @include media-up(md) {
+      margin-left: -30px;
+    }
+
+    @include media-up(lg) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin-left: 0;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__socials {
+    position: relative;
+    z-index: 101;
+    margin-left: 16px;
+    margin-right: auto;
+
+    @include media-up(md) {
+      margin-left: 30px;
+    }
+
+    @include media-up(lg) {
+      margin-left: 100px;
+    }
+
+    @media (min-width: 1820px) {
+      margin-left: 0;
+    }
+  }
+}
+
+.nav {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  text-align: center;
+
+  @include media-down(md) {
+    transition: transform .5s;
+    transform: translateX(101%) !important;
+
+    .show-nav & {
+      transform: translateX(0) !important;
+    }
+  }
+
+  @include media-up(lg) {
+    position: absolute;
+    left: auto;
+    right: 30px;
+    top: auto;
+    width: auto;
+    height: auto;
+    transform: none;
+    text-align: left;
+    display: block;
+  }
+
+  &__list {
+    @include media-up(lg) {
+      display: flex;
+    }
+  }
+
+  li {
+    &:not(:last-child) {
+      @include media-up(lg) {
+        margin-bottom: 0;
+        margin-right: 15px;
+      }
+
+      @include media-up(xl) {
+        margin-right: 30px;
+      }
+
+      @include media-up(xxl) {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  a {
+    color: $black;
+    @include link;
+    font-size: 20px;
+
+    &.active {
+      color: $blue;
+    }
+
+    @include media-only(lg) {
+      font-size: 18px;
+    }
+
+    @include media-up(xxl) {
+      font-size: 24px;
+    }
+  }
+}

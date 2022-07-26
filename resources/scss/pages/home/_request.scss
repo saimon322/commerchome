@@ -1,0 +1,56 @@
+.request {
+  background: $yellow;
+}
+
+.request-form {
+  .form-wrapper {
+    input,
+    select,
+    textarea {
+      height: 36px;
+      padding: 0 5px;
+      font-family: inherit;
+      border: none;
+      background: $yellow;
+      color: #fff;
+
+      &::placeholder {
+        color: #fff;
+      }
+
+      @include media-up(lg) {
+        padding: 0 10px;
+      }
+    }
+
+    textarea {
+      height: auto;
+    }
+
+    input {
+      &:-webkit-autofill{
+        -webkit-text-fill-color: #fff !important;
+
+        &,
+        &:hover,
+        &:focus,
+        &:active{
+          -webkit-box-shadow: 0 0 0 30px $yellow inset !important;
+        }
+      }
+    }
+  }
+
+  .btn {
+    margin: 0 auto;
+    margin-top: 30px;
+
+    @include media-up(md) {
+      margin-top: 50px;
+    }
+
+    @include media-up(lg) {
+      margin-top: 80px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1500px,
+);
+
+// Fonts
+$raleway: 'Raleway', -apple-system, system-ui, sans-serif;
+$bebas: 'AA Bebas Neue', -apple-system, system-ui, sans-serif;
+
+// Colors
+$black: #18140D;
+$text: #020202;
+$blue: #006A83;
+$blue-hover: #00819e;
+$blue-active: #015669;
+$yellow: #F1D299;
+$yellow-50: #f1d29980;
+$gray: #717171;
+
+// Shadows
+$shadow: -5px 5px 12px rgba(0, 0, 0, 0.25);

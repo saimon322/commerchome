@@ -1,0 +1,31 @@
+.btn {
+  display: block;
+  width: fit-content;
+  min-width: 155px;
+  padding: 12px 15px;
+  font-family: $bebas;
+  font-size: 20px;
+  line-height: 1;
+  background: $blue;
+  color: #fff;
+  user-select: none;
+  text-align: center;
+  box-shadow: -5px 5px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color .3s;
+  cursor: pointer;
+
+  @include media-up(lg) {
+    min-width: 205px;
+    padding: 22px 24px 20px;
+    font-family: $bebas;
+    font-size: 24px;
+  }
+
+  &:hover {
+    background: $blue-hover;
+  }
+
+  &:active {
+    background: $blue-active;
+  }
+}

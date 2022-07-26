@@ -1,0 +1,44 @@
+.socials {
+  display: flex;
+}
+
+.social {
+  position: relative;
+  height: 20px;
+  color: $blue;
+  transition: color .15s;
+
+  @include media-up(md) {
+    height: 25px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+
+    @include media-up(md) {
+      margin-right: 22px;
+    }
+  }
+
+  &:hover {
+    color: $yellow;
+  }
+
+  svg {
+    height: 100%;
+  }
+
+
+  span {
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    font-size: 24px;
+    line-height: 1;
+
+    @include media-up(md) {
+      right: -9px;
+      font-size: 30px;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 0;
+
+  @include media-up(md) {
+    padding-top: 100px;
+    justify-content: center;
+  }
+
+  .container {
+    @include media-up(md) {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    padding: 50px 0;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @include media-up(md) {
+      margin-bottom: 25px;
+    }
+
+    span {
+      position: relative;
+      display: block;
+      width: fit-content;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 6px;
+        transform: translateX(100%);
+        display: block;
+        width: 30px;
+        height: 35px;
+        background: url(../../../img/icon/key.png) center / contain no-repeat;
+
+        @include media-up(md) {
+          right: 5px;
+          top: 10px;
+          width: 40px;
+          height: 50px;
+        }
+
+        @include media-up(lg) {
+          right: 20px;
+          top: 10px;
+          width: 75px;
+          height: 85px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    color: $gray;
+
+    @include media-up(md) {
+      font-size: 24px;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-gap: 20px;
+    margin-top: 40px;
+
+    @include media-up(md) {
+      width: 100%;
+      max-width: 700px;
+      grid-template-columns: 1fr auto;
+      margin-top: 80px;
+    }
+
+    @include media-up(lg) {
+      width: 700px;
+      margin-top: 100px;
+    }
+
+    input {
+      border: 2px solid $gray;
+
+      @include media-up(lg) {
+        font-size: 36px;
+        color: $blue;
+
+        &::placeholder {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .btn {
+      @include media-down(sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__img {
+    flex: 1 1 0;
+
+    @include media-up(md) {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 55vw;
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

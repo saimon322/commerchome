@@ -1,0 +1,64 @@
+.swal2-popup {
+  background: $blue !important;
+  padding: 40px 20px !important;
+
+  @include media-up(md) {
+    padding: 80px 20px !important;
+  }
+
+  @include media-up(lg) {
+    width: 700px !important;
+  }
+
+  button {
+    display: none !important;
+  }
+}
+
+.swal2-title {
+  color: $yellow !important;
+  padding: 0 !important;
+  font-weight: normal !important;
+  font-size: 24px !important;
+  margin-bottom: 5px !important;
+
+  @include media-up(md) {
+    font-size: 36px !important;
+    margin-bottom: 0 !important;
+  }
+
+  &:after {
+    content: '';
+    position: relative;
+    top: 2px;
+    left: 5px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../../img/icon/smile.png) center / contain no-repeat;
+
+    @include media-up(md) {
+      top: 5px;
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+.swal2-html-container {
+  font-size: 18px !important;
+  color: #FFFFFF !important;
+  margin: 0 !important;
+
+  @include media-up(md) {
+    font-size: 32px !important;
+  }
+}
+
+.swal2-icon.swal2-success {
+  display: none !important;
+}
+
+.swal2-actions {
+  display: none !important;
+}

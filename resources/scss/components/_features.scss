@@ -1,0 +1,64 @@
+.features-list {
+  height: 100%;
+
+  @include media-up(xl) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.feature {
+  position: relative;
+  padding-left: 90px;
+  margin-bottom: 40px;
+
+  @include media-up(md) {
+    padding-left: 120px;
+    margin-bottom: 70px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @include media-down(sm) {
+      transform: scale(0.6);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: -20px;
+      display: block;
+      width: 76px;
+      height: 76px;
+      background: $yellow;
+      border-radius: 50%;
+    }
+
+    img {
+      position: relative;
+      max-width: 90px;
+      max-height: 90px;
+      z-index: 1;
+    }
+  }
+
+  &__title {
+    color: $blue;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    @include media-up(md) {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,166 @@
+.about {
+  position: relative;
+  min-height: 100vh;
+
+  @include media-down(sm) {
+    padding-top: 20px;
+  }
+
+  @include media-up(md) {
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    display: grid;
+    grid-gap: 30px;
+
+    @include media-up(lg) {
+      padding-bottom: 150px;
+    }
+
+    @include media-up(xl) {
+      position: relative;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  .features-list {
+    @include media-up(xl) {
+      padding-top: 30px;
+    }
+  }
+
+  .feature {
+    &__icon {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:first-child {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: -16px;
+        right: -16px;
+        top: -20px;
+        bottom: -20px;
+        display: block;
+        background: url(../../../img/base/bg.jpg) center / cover no-repeat;
+
+        @include media-up(md) {
+          left: -30px;
+          right: -30px;
+          top: -30px;
+          bottom: -30px;
+        }
+
+        @include media-up(xl) {
+          left: -50vw;
+        }
+      }
+
+      .feature {
+        &__title {
+          color: #fff;
+
+          span {
+            color: $yellow;
+          }
+        }
+
+        &__text {
+          color: #fff;
+        }
+
+        &__icon:before {
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  &__img {
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__pdf {
+    position: relative;
+    width: 100%;
+    background: #FFFFFF;
+    padding: 20px;
+    box-shadow: -15px 16px 34px -2px rgba(0, 0, 0, 0.2);
+    border-radius: 14px;
+    color: $yellow;
+    transition: color .25s;
+
+    &:hover {
+      color: $blue;
+    }
+
+    @include media-up(lg) {
+      position: absolute;
+      right: 15px;
+      bottom: 50px;
+      width: 700px;
+      height: 270px;
+    }
+
+    @include media-up(xl) {
+      bottom: 0;
+    }
+
+    svg {
+      width: 100px;
+      height: 100px;
+
+      @include media-up(md) {
+        width: 174px;
+        height: 174px;
+      }
+    }
+
+    span {
+      position: relative;
+      display: block;
+      z-index: 1;
+      font-family: $bebas;
+      font-size: 24px;
+
+      @include media-up(md) {
+        font-size: 32px;
+      }
+
+      @include media-up(lg) {
+        margin-top: 10px;
+        font-size: 36px;
+      }
+    }
+
+    img {
+      position: absolute;
+      right: 0;
+      bottom: -15px;
+      height: 100%;
+      max-width: 80%;
+      object-fit: contain;
+
+      @include media-up(xl) {
+        right: -50px;
+        bottom: -90px;
+        height: 145%;
+        max-width: 100%;
+      }
+    }
+  }
+}

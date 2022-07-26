@@ -1,0 +1,33 @@
+// LIBS
+@import 'node_modules/swiper/swiper-bundle.min';
+@import 'node_modules/sweetalert2/dist/sweetalert2.min';
+
+// SPECIFICATION
+@import "spec/fonts";
+@import "spec/variables";
+@import "spec/mixins";
+@import "spec/global";
+@import "spec/visually-hidden";
+
+// COMPONENTS
+@import "components/container";
+@import "components/socials";
+@import "components/hamburger";
+@import "components/header";
+@import "components/footer";
+// @import "components/custom-select";
+@import "components/btn";
+@import "components/wow";
+@import "components/features";
+@import "components/swal2";
+@import "components/swiper";
+
+// HOMEPAGE
+@import "pages/home/hero";
+@import "pages/home/about";
+@import "pages/home/advantages";
+@import "pages/home/design";
+@import "pages/home/request";
+@import "pages/home/management";
+@import "pages/home/features";
+@import "pages/home/contacts";

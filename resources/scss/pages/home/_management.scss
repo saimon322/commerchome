@@ -1,0 +1,146 @@
+.management {
+  position: relative;
+
+  @include media-up(lg) {
+    min-height: 100vh;
+  }
+
+  @include media-down(sm) {
+    padding-bottom: 0;
+  }
+
+  @include media-up(lg) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__banner {
+    padding: 12px;
+    position: relative;
+    background: url(../../../img/base/bg-line.jpg) center / cover no-repeat;
+    color: #fff;
+    text-transform: uppercase;
+
+    @include media-up(lg) {
+      font-size: 20px;
+    }
+
+    @media (min-width: 1750px) {
+      height: 130px;
+    }
+
+    .container {
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    img {
+      height: 50px;
+      margin-right: 20px;
+
+      @include media-up(lg) {
+        height: 100px;
+      }
+
+      @media (min-width: 1750px) {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: 50px 0;
+
+    @include media-up(lg) {
+      flex: 1 1 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+
+    @include media-up(lg) {
+      max-width: 440px;
+      font-size: 72px;
+      line-height: 1;
+    }
+
+    span {
+      position: relative;
+      display: block;
+      width: fit-content;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    color: $gray;
+
+    @include media-up(lg) {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-gap: 20px;
+    margin-top: 40px;
+
+    @include media-up(lg) {
+      width: 100%;
+      max-width: 700px;
+      grid-template-columns: 1fr auto;
+      margin-top: 80px;
+    }
+
+    @include media-up(lg) {
+      width: 700px;
+    }
+
+    input {
+      border: 2px solid $gray;
+    }
+
+    .btn {
+      @include media-down(sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__img {
+    flex: 1 1 0;
+
+    @include media-up(lg) {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      top: 70px;
+      width: 45vw;
+      height: calc(100% - 140px);
+    }
+
+    @include media-up(xl) {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      top: 90px;
+      width: 60vw;
+      height: calc(100% - 180px);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
