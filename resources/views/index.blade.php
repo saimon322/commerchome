@@ -108,7 +108,7 @@
             </div>
         </div>
         <div class="hero__img wow">
-            <img src="img/base/hero.jpg" alt="">
+            <img src="img/base/hero.jpg" alt="" loading="lazy">
         </div>
     </section>
     <section class="about section" id="about">
@@ -133,7 +133,7 @@
                         <use xlink:href="#pdf"></use>
                     </svg>
                     <span>скачай презентацию</span>
-                    <img src="img/base/magazines-1.png" alt="">
+                    <img src="img/base/magazines-1.png" alt="" loading="lazy">
                 </a>
             @endif
         </div>
@@ -172,45 +172,282 @@
 
         <div class="design-slider design-slider-1">
             <div class="swiper-wrapper">
-                @foreach($data['design_slider'] as $design)
-                    <div class="design-slide swiper-slide">
-                        <div class="design-slide__img">
-                            <img src="{{$design['image']}}" alt="design {{$loop->iteration}}">
+                <div class="design-slide swiper-slide">
+                    <div class="design-slide__gallery gallery-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-1-1.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-1-2.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-1-3.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-1-4.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-1-5.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-1-6.jpg" alt="" loading="lazy"></div>
                         </div>
-                        <div class="design-slide__wrapper">
-                            <div class="container">
+                        <div class="swiper-navigation">
+                            <button class="swiper-btn gallery-btn-prev">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-btn gallery-btn-next">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="design-slide__wrapper">
+                        <div class="container">
+                            <div class="design-slide__content">
+                                <div class="design-slide__title h3">
+                                    СКАНДИНАВСКИЙ <span>стиль</span>
+                                </div>
+                                <div class="design-slide__text">
+                                    Уют и функционализм - вот основные составляющие этого дизайна, удобная мебель и&nbsp;лаконичные формы. В отделке преобладает серая цветовая гамма с использованием белого, голубого и древесного цветов.
+                                </div>
+                            </div>
+                            <div class="design-slide__plan">
                                 <div class="design-slide__info">
-                                    <div class="design-slide__title h3">
-                                        {!!$design['headline']!!}
-                                    </div>
-                                    <div class="design-slide__text">
-                                        {!!$design['text']!!}
-                                    </div>
+                                    <span class="number">1</span>
+                                    <span class="text">комнатная</span>
                                 </div>
-                                <div class="design-slide__plan">
-                                    <div class="design-slide__numbers">
-                                        <span class="number">{{$design['rooms']}}</span>
-                                        <span class="text">комнатная</span>
-                                    </div>
-                                    <img src="{{$design['plan']}}" alt="plan {{$loop->iteration}}">
-                                </div>
+                                <img src="img/slider/styles/scand-1-plan.png" alt="">
                             </div>
                         </div>
                     </div>
-                @endforeach
+                </div>
+                <div class="design-slide swiper-slide">
+                    <div class="design-slide__gallery gallery-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/slider/styles/modern-1-1.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/modern-1-2.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/modern-1-3.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/modern-1-4.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/modern-1-5.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/modern-1-6.jpg" alt="" loading="lazy"></div>
+                        </div>
+                        <div class="swiper-navigation">
+                            <button class="swiper-btn gallery-btn-prev">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-btn gallery-btn-next">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="design-slide__wrapper">
+                        <div class="container">
+                            <div class="design-slide__content">
+                                <div class="design-slide__title h3">
+                                    <span>стиль</span> МОДЕРНИЗМ
+                                </div>
+                                <div class="design-slide__text">
+                                    Сочетание всевозможных цветов и фактур, характерных для стиля поп-арт, делает интерьер радужно яркими и неординарным. Интерьер этой однокомнатной квартиры представляет собой настоящую цветовую феерию. Его живой и неординарный дизайн заряжает энергией и позитивом.
+                                </div>
+                            </div>
+                            <div class="design-slide__plan">
+                                <div class="design-slide__info">
+                                    <span class="number">1</span>
+                                    <span class="text">комнатная</span>
+                                </div>
+                                <img src="img/slider/styles/modern-1-plan.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="design-slide swiper-slide">
+                    <div class="design-slide__gallery gallery-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/slider/styles/contemporary-1-1.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/contemporary-1-2.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/contemporary-1-3.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/contemporary-1-4.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/contemporary-1-5.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/contemporary-1-6.jpg" alt="" loading="lazy"></div>
+                        </div>
+                        <div class="swiper-navigation">
+                            <button class="swiper-btn gallery-btn-prev">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-btn gallery-btn-next">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="design-slide__wrapper">
+                        <div class="container">
+                            <div class="design-slide__content">
+                                <div class="design-slide__title h3">
+                                    КОНТЕМПОРАРИ <span>стиль</span>
+                                </div>
+                                <div class="design-slide__text">
+                                    Идеально подойдет тем, кто предпочитает простоту, комфорт и современный подход к оформ-лению интерьера. С эффектом «живого» пространства. Дизайн выполнен в сдержанной цветовой гамме с различными оттенкамикоричневого и молочного цвета.
+                                </div>
+                            </div>
+                            <div class="design-slide__plan">
+                                <div class="design-slide__info">
+                                    <span class="number">1</span>
+                                    <span class="text">комнатная</span>
+                                </div>
+                                <img src="img/slider/styles/contemporary-1-plan.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="design-slide swiper-slide">
+                    <div class="design-slide__gallery gallery-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-2-1.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-2-2.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-2-3.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-2-4.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-2-5.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-2-6.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-2-7.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-2-8.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-2-9.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/scand-2-10.jpg" alt="" loading="lazy"></div>
+                        </div>
+                        <div class="swiper-navigation">
+                            <button class="swiper-btn gallery-btn-prev">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-btn gallery-btn-next">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="design-slide__wrapper">
+                        <div class="container">
+                            <div class="design-slide__content">
+                                <div class="design-slide__title h3">
+                                    СКАНДИНАВСКИЙ <span>стиль</span>
+                                </div>
+                                <div class="design-slide__text">
+                                    Это просторный, уютный и функциональный интерьер. Для всех помещений мы подобрали удобную мебель лаконичных форм. Использование деревянных текстур привнесло в интерьер природные нотки и сделало его более теплым и уютным.
+                                </div>
+                            </div>
+                            <div class="design-slide__plan">
+                                <div class="design-slide__info">
+                                    <span class="number">2</span>
+                                    <span class="text">комнатная</span>
+                                </div>
+                                <img src="img/slider/styles/scand-2-plan.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="design-slide swiper-slide">
+                    <div class="design-slide__gallery gallery-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/slider/styles/modern-2-1.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/modern-2-2.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/modern-2-3.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/modern-2-4.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/modern-2-5.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/modern-2-6.jpg" alt="" loading="lazy"></div>
+                        </div>
+                        <div class="swiper-navigation">
+                            <button class="swiper-btn gallery-btn-prev">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-btn gallery-btn-next">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="design-slide__wrapper">
+                        <div class="container">
+                            <div class="design-slide__content">
+                                <div class="design-slide__title h3">
+                                    <span>стиль</span> МОДЕРНИЗМ
+                                </div>
+                                <div class="design-slide__text">
+                                    Интерьер, оформленный в этом стиле, отличается ультрасовременным видом. Интересные архитектурные конструкции, цветовая гамма,построенная на контрастах. Удобная и функциональная мебель - все это придает пространству современный вид.
+                                </div>
+                            </div>
+                            <div class="design-slide__plan">
+                                <div class="design-slide__info">
+                                    <span class="number">2</span>
+                                    <span class="text">комнатная</span>
+                                </div>
+                                <img src="img/slider/styles/modern-2-plan.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="design-slide swiper-slide">
+                    <div class="design-slide__gallery gallery-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/slider/styles/contemporary-2-1.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/contemporary-2-2.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/contemporary-2-3.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/contemporary-2-4.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/contemporary-2-5.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/styles/contemporary-2-6.jpg" alt="" loading="lazy"></div>
+                        </div>
+                        <div class="swiper-navigation">
+                            <button class="swiper-btn gallery-btn-prev">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-btn gallery-btn-next">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="design-slide__wrapper">
+                        <div class="container">
+                            <div class="design-slide__content">
+                                <div class="design-slide__title h3">
+                                    КОНТЕМПОРАРИ <span>стиль</span>
+                                </div>
+                                <div class="design-slide__text">
+                                    Отлично подходит для городских квартир, так как он весьма удобен и многофункционален. Тона,визуально расширяют пространство, создавая в нем ощущение глубины и простора. Яркие цветовые акценты и обилие разных текстур придают квартире неповторимый уют.
+                                </div>
+                            </div>
+                            <div class="design-slide__plan">
+                                <div class="design-slide__info">
+                                    <span class="number">2</span>
+                                    <span class="text">комнатная</span>
+                                </div>
+                                <img src="img/slider/styles/contemporary-2-plan.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="swiper-navigation">
-                <button class="swiper-btn swiper-btn--prev">
+                <button class="swiper-btn design-btn-prev">
                     <svg width="22" height="27">
                         <use xlink:href="#arrow"></use>
                     </svg>
                 </button>
-                <button class="swiper-btn swiper-btn--next">
+                <button class="swiper-btn design-btn-next">
                     <svg width="22" height="27">
                         <use xlink:href="#arrow"></use>
                     </svg>
                 </button>
             </div>
+            <div class="swiper-pagination"></div>
         </div>
 
         <div class="design__pdf">
@@ -224,7 +461,7 @@
                             <span>скачайте презентацию</span> все о дизайне и ремонте
                         </span>
                     </a>
-                    <img src="img/base/magazines-2.png" alt="">
+                    <img src="img/base/magazines-2.png" alt="" loading="lazy">
                 @endif
             </div>
         </div>
@@ -241,47 +478,335 @@
 
         <div class="design-slider design-slider-2">
             <div class="swiper-wrapper">
-                @foreach($data['design_slider_2'] as $design)
-                    <div class="design-slide swiper-slide">
-                        <div class="design-slide__img">
-                            <img src="{{$design['image']}}" alt="design {{$loop->iteration}}">
+                <div class="design-slide swiper-slide">
+                    <div class="design-slide__gallery gallery-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-1.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-2.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-3.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-4.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-5.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-6.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-7.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-8.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-9.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-10.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-11.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-12.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-13.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-14.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-15.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-16.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-17.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/dadaevo-18.jpg" alt="" loading="lazy"></div>
                         </div>
-                        <div class="design-slide__numbers">
-                            <span class="number">{{$loop->iteration}}</span>
-                            <span class="text">вариант</span>
-                            <span class="number">{{$design['rooms']}}</span>
-                            <span class="text">комнатная</span>
+                        <div class="swiper-navigation">
+                            <button class="swiper-btn gallery-btn-prev">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-btn gallery-btn-next">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
                         </div>
-                        <div class="design-slide__wrapper">
-                            <div class="container">
-                                <div class="design-slide__info">
-                                    <div class="design-slide__title h3">
-                                        {!!$design['headline']!!}
-                                    </div>
-                                    <div class="design-slide__text">
-                                        {!!$design['text']!!}
-                                    </div>
+                    </div>
+                    <div class="design-slide__wrapper">
+                        <div class="container">
+                            <div class="design-slide__content">
+                                <div class="design-slide__title h3">
+                                    <span>ЖК ДАДАЕВСКИЙ</span>
                                 </div>
-                                <div class="design-slide__plan">
-                                    <img src="{{$design['plan']}}" alt="plan {{$loop->iteration}}">
+                                <div class="design-slide__text">
+                                    Дизайн интерьера выполнен преимущественно в светлых оттенках.<br>
+                                    Мы уделили особое внимание эргономике кухни. Спальная комната в серо-розовых оттенках соединена с балконом, оборудованным под рабочую зону.<br>
+                                    Элементы декора выдержаны в едином стиле, что привносит в общий интерьер уют и гармонию.
                                 </div>
+                            </div>
+                            <div class="design-slide__video">
+                                <iframe src="https://www.youtube.com/embed/GigOOU1f_AA" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
-                @endforeach
+                    <div class="design-slide__info">
+                        <div class="design-slide__address">
+                            <img src="img/base/map.png" alt="">
+                            <span class="text">г.Москва ул. Татарена, дом 9в </span>
+                        </div>
+                        <div class="design-slide__rooms">
+                            <span class="number">2</span>
+                            <span class="text">комнатная</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="design-slide swiper-slide">
+                    <div class="design-slide__gallery gallery-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-1.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-2.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-3.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-4.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-5.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-6.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-7.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-8.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-9.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-10.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-11.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-12.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-13.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-14.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-15.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/novocher-16.jpg" alt="" loading="lazy"></div>
+                        </div>
+                        <div class="swiper-navigation">
+                            <button class="swiper-btn gallery-btn-prev">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-btn gallery-btn-next">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="design-slide__wrapper">
+                        <div class="container">
+                            <div class="design-slide__content">
+                                <div class="design-slide__title h3">
+                                    <span>ЖК Новочеремушкинская</span>
+                                </div>
+                                <div class="design-slide__text">
+                                    Дизайн интерьера выполнен преимущественно в светлых оттенках.<br>
+                                    Мы уделилиособое внимание эргономике кухни. Спальная комната в серо-розовых оттенках соединена с балконом, оборудованным под рабочую зону.<br>
+                                    Элементы декора выдержаны в едином стиле, что привносит в общий интерьер уют и гармонию.
+                                </div>
+                            </div>
+                            <div class="design-slide__video">
+                                <iframe src="https://www.youtube.com/embed/wEBpDcFxpTM" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="design-slide__info">
+                        <div class="design-slide__address">
+                            <img src="img/base/map.png" alt="">
+                            <span class="text">г.Москва ЖК Новочеремушкинская,17</span>
+                        </div>
+                        <div class="design-slide__rooms">
+                            <span class="number">2</span>
+                            <span class="text">комнатная</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="design-slide swiper-slide">
+                    <div class="design-slide__gallery gallery-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-1.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-2.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-3.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-4.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-5.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-6.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-7.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-8.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-9.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-10.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-11.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-12.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-13.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-14.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-15.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-16.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-17.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-18.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-19.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-20.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-21.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-22.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/acrhitect-23.jpg" alt="" loading="lazy"></div>
+                        </div>
+                        <div class="swiper-navigation">
+                            <button class="swiper-btn gallery-btn-prev">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-btn gallery-btn-next">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="design-slide__wrapper">
+                        <div class="container">
+                            <div class="design-slide__content">
+                                <div class="design-slide__title h3">
+                                    <span>ЖК Резиденции Архитекторов</span>
+                                </div>
+                                <div class="design-slide__text">
+                                    Просторная и светлая квартира с большими окнами, выходящими на набережную, двумя санузлами с необычной отделкой и отдельной гардеробной.
+                                </div>
+                            </div>
+                            <div class="design-slide__video">
+                                <iframe src="https://www.youtube.com/embed/_-1AATjErM8" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="design-slide__info">
+                        <div class="design-slide__address">
+                            <img src="img/base/map.png" alt="">
+                            <span class="text">г.Москва. ЖК Резиденции Архитекторов</span>
+                        </div>
+                        <div class="design-slide__rooms">
+                            <span class="number">2</span>
+                            <span class="text">комнатная</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="design-slide swiper-slide">
+                    <div class="design-slide__gallery gallery-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-1.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-2.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-3.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-4.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-5.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-6.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-7.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-8.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-9.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-10.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-11.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-12.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-13.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-14.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-15.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-16.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-17.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-18.jpg" alt="" loading="lazy"></div>
+                        </div>
+                        <div class="swiper-navigation">
+                            <button class="swiper-btn gallery-btn-prev">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-btn gallery-btn-next">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="design-slide__wrapper">
+                        <div class="container">
+                            <div class="design-slide__content">
+                                <div class="design-slide__title h3">
+                                    <span>Ленинский проспект</span>
+                                </div>
+                                <div class="design-slide__text">
+                                    Дизайн интерьера выполнен преимущественно в светлых оттенках.<br>
+                                    Мы уделил особое внимание эргономике кухни.
+                                    Спальная комната в серых оттенках соединена с балконом.
+                                    Все элементы декора выдержаны в едином стиле.
+                                </div>
+                            </div>
+                            <div class="design-slide__video">
+                                <iframe src="https://www.youtube.com/embed/AHyrq541O5Y" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="design-slide__info">
+                        <div class="design-slide__address">
+                            <img src="img/base/map.png" alt="">
+                            <span class="text">г.Москва, Ленинский проспект, д.109</span>
+                        </div>
+                        <div class="design-slide__rooms">
+                            <span class="number">2</span>
+                            <span class="text">комнатная</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="design-slide swiper-slide">
+                    <div class="design-slide__gallery gallery-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-1.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-2.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-3.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-4.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-5.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-6.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-7.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-8.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-9.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-10.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-11.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-12.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-13.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-14.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-15.jpg" alt="" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="img/slider/projects/ozerovskaya-16.jpg" alt="" loading="lazy"></div>
+                        </div>
+                        <div class="swiper-navigation">
+                            <button class="swiper-btn gallery-btn-prev">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="swiper-btn gallery-btn-next">
+                                <svg width="22" height="27">
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="design-slide__wrapper">
+                        <div class="container">
+                            <div class="design-slide__content">
+                                <div class="design-slide__title h3">
+                                    <span>Озерковская набережная</span>
+                                </div>
+                                <div class="design-slide__text">
+                                    Проект этой квартиры мы выполнили в современном стиле, добавив некоторые элементы из лофта.
+                                    Наши дизайнеры выдержали обстановку в светлых тонах, но часть мебели мы решили поставить из тонких металлических оснований – так они не перегружают пространство.
+                                    А за освещение отвечают потолочные рампы – такие светильники отлично перекликаются с другими элементами вроде имитации кирпичной кладки и хромированных поверхностей.
+                                </div>
+                            </div>
+                            <div class="design-slide__video">
+                                <iframe src="https://www.youtube.com/embed/CQKMvoqOLoY" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="design-slide__info">
+                        <div class="design-slide__address">
+                            <img src="img/base/map.png" alt="">
+                            <span class="text">г. Москва, Озерковская набережная </span>
+                        </div>
+                        <div class="design-slide__rooms">
+                            <span class="number">2</span>
+                            <span class="text">комнатная</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="swiper-navigation">
-                <button class="swiper-btn swiper-btn--prev">
+                <button class="swiper-btn design-btn-prev">
                     <svg width="22" height="27">
                         <use xlink:href="#arrow"></use>
                     </svg>
                 </button>
-                <button class="swiper-btn swiper-btn--next">
+                <button class="swiper-btn design-btn-next">
                     <svg width="22" height="27">
                         <use xlink:href="#arrow"></use>
                     </svg>
                 </button>
             </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
     <section class="request section">

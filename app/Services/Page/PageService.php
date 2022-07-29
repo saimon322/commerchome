@@ -31,7 +31,7 @@ class PageService
      */
     public function getModel(): mixed
     {
-        $slug = $this->request->getRequestUri();
+        $slug = $this->request->path();
         
         return $this->page->where('slug', $slug)->get()->first();
     }

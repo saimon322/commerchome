@@ -1,45 +1,56 @@
 .swiper-navigation {
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    gap: 10px;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  gap: 10px;
 
-    @include media-up(lg) {
-      flex-direction: column;
+  @include media-up(lg) {
+    flex-direction: column;
+  }
+}
+
+.swiper-btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $blue;
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid $blue;
+  transition: .15s;
+
+  @include media-up(lg) {
+    width: 55px;
+    height: 55px;
+  }
+
+  @include media-up(lg) {
+    &:hover {
+      background: transparent;
+      color: #C4C4C4;
+      border-color: $yellow;
     }
   }
 
-  .swiper-btn {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $blue;
-    border-radius: 50%;
+  &:first-child {
+    transform: rotate(-90deg);
 
     @include media-up(lg) {
-      width: 55px;
-      height: 55px;
-    }
-
-    &--prev {
-      transform: rotate(-90deg);
-
-      @include media-up(lg) {
-        transform: rotate(0);
-      }
-    }
-
-    &--next {
-      transform: rotate(90deg);
-
-      @include media-up(lg) {
-        transform: rotate(180deg);
-      }
-    }
-
-    svg {
-      width: 50%;
+      transform: rotate(0);
     }
   }
+
+  &:last-child {
+    transform: rotate(90deg);
+
+    @include media-up(lg) {
+      transform: rotate(180deg);
+    }
+  }
+
+  svg {
+    width: 50%;
+  }
+}

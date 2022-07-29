@@ -124,7 +124,7 @@ class PagesEditScreen extends Screen
                       ])
                       ->hr(),
                 Matrix::make('design_slider')
-                      ->title('Современный дизайн')
+                      ->title('Стили дизайна')
                       ->columns([
                           'Заголовок'     => 'headline',
                           'Кол-во комнат' => 'rooms',
@@ -142,7 +142,7 @@ class PagesEditScreen extends Screen
                           'image_2'  => Picture::make()->targetRelativeUrl(),
                       ]),
                 Matrix::make('design_slider_2')
-                      ->title('Современный дизайн 2')
+                      ->title('Реализованные проекты')
                       ->columns([
                           'Заголовок'     => 'headline',
                           'Кол-во комнат' => 'rooms',
