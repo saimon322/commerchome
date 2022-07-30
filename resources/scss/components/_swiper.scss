@@ -26,12 +26,10 @@
     height: 55px;
   }
 
-  @include media-up(lg) {
-    &:hover {
-      background: transparent;
-      color: #C4C4C4;
-      border-color: $yellow;
-    }
+  &:hover {
+    background: transparent;
+    color: #C4C4C4;
+    border-color: $yellow;
   }
 
   &:first-child {

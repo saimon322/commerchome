@@ -108,7 +108,7 @@
             </div>
         </div>
         <div class="hero__img wow">
-            <img src="img/base/hero.jpg" alt="" loading="lazy">
+            <img src="img/base/hero.jpg" alt="">
         </div>
     </section>
     <section class="about section" id="about">
@@ -133,7 +133,7 @@
                         <use xlink:href="#pdf"></use>
                     </svg>
                     <span>скачай презентацию</span>
-                    <img src="img/base/magazines-1.png" alt="" loading="lazy">
+                    <img src="img/base/magazines-1.png" alt="">
                 </a>
             @endif
         </div>
@@ -164,13 +164,13 @@
             <div class="container">
                 <h2>Адаптивный <span>модульный дизайн</span></h2>
                 <div class="design__text">
-                    <h3>выберите свой стиль интерьера</h3>
+                    <h3>Выберите свой стиль интерьера.</h3>
                     <p>Наши дизайнеры разработали дизайн-проекты в разных интерьерных стилях, которые мы адаптируем под ваши планировки квартир.</p>
                 </div>
             </div>
         </div>
 
-        <div class="design-slider design-slider-1">
+        <div class="design-slider designes-slider">
             <div class="swiper-wrapper">
                 <div class="design-slide swiper-slide">
                     <div class="design-slide__gallery gallery-slider">
@@ -206,7 +206,7 @@
                                 </div>
                             </div>
                             <div class="design-slide__plan">
-                                <div class="design-slide__info">
+                                <div class="design-slide__rooms">
                                     <span class="number">1</span>
                                     <span class="text">комнатная</span>
                                 </div>
@@ -249,7 +249,7 @@
                                 </div>
                             </div>
                             <div class="design-slide__plan">
-                                <div class="design-slide__info">
+                                <div class="design-slide__rooms">
                                     <span class="number">1</span>
                                     <span class="text">комнатная</span>
                                 </div>
@@ -292,7 +292,7 @@
                                 </div>
                             </div>
                             <div class="design-slide__plan">
-                                <div class="design-slide__info">
+                                <div class="design-slide__rooms">
                                     <span class="number">1</span>
                                     <span class="text">комнатная</span>
                                 </div>
@@ -339,7 +339,7 @@
                                 </div>
                             </div>
                             <div class="design-slide__plan">
-                                <div class="design-slide__info">
+                                <div class="design-slide__rooms">
                                     <span class="number">2</span>
                                     <span class="text">комнатная</span>
                                 </div>
@@ -382,7 +382,7 @@
                                 </div>
                             </div>
                             <div class="design-slide__plan">
-                                <div class="design-slide__info">
+                                <div class="design-slide__rooms">
                                     <span class="number">2</span>
                                     <span class="text">комнатная</span>
                                 </div>
@@ -425,7 +425,7 @@
                                 </div>
                             </div>
                             <div class="design-slide__plan">
-                                <div class="design-slide__info">
+                                <div class="design-slide__rooms">
                                     <span class="number">2</span>
                                     <span class="text">комнатная</span>
                                 </div>
@@ -470,13 +470,13 @@
             <div class="container">
                 <h2>реализованные <span>проекты</span></h2>
                 <div class="design__text">
-                    <h3>проекты в москве и МО.</h3>
+                    <h3>Проекты в москве и МО.</h3>
                     <p>Мы занимаемся модульным ремонтом с 2018г. Сотрудничаем с застройщиками  жилой недвижимости, агентствами недвижимости так и реализуем проекты для частных заказчиков.</p>
                 </div>
             </div>
         </div>
 
-        <div class="design-slider design-slider-2">
+        <div class="design-slider projects-slider">
             <div class="swiper-wrapper">
                 <div class="design-slide swiper-slide">
                     <div class="design-slide__gallery gallery-slider">
@@ -517,7 +517,11 @@
                         <div class="container">
                             <div class="design-slide__content">
                                 <div class="design-slide__title h3">
-                                    <span>ЖК ДАДАЕВСКИЙ</span>
+                                    ЖК ДАДАЕВСКИЙ
+                                </div>
+                                <div class="design-slide__address">
+                                    <img src="img/base/map.png" alt="">
+                                    <span class="text">г.Москва ул. Татарена, дом 9в </span>
                                 </div>
                                 <div class="design-slide__text">
                                     Дизайн интерьера выполнен преимущественно в светлых оттенках.<br>
@@ -526,19 +530,13 @@
                                 </div>
                             </div>
                             <div class="design-slide__video">
-                                <iframe src="https://www.youtube.com/embed/GigOOU1f_AA" frameborder="0" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/GigOOU1f_AA" frameborder="0" allowfullscreen loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>
-                    <div class="design-slide__info">
-                        <div class="design-slide__address">
-                            <img src="img/base/map.png" alt="">
-                            <span class="text">г.Москва ул. Татарена, дом 9в </span>
-                        </div>
-                        <div class="design-slide__rooms">
-                            <span class="number">2</span>
-                            <span class="text">комнатная</span>
-                        </div>
+                    <div class="design-slide__rooms">
+                        <span class="number">2</span>
+                        <span class="text">комнатная</span>
                     </div>
                 </div>
                 <div class="design-slide swiper-slide">
@@ -578,7 +576,11 @@
                         <div class="container">
                             <div class="design-slide__content">
                                 <div class="design-slide__title h3">
-                                    <span>ЖК Новочеремушкинская</span>
+                                    ЖК Новочеремушкинская
+                                </div>
+                                <div class="design-slide__address">
+                                    <img src="img/base/map.png" alt="">
+                                    <span class="text">г.Москва ЖК Новочеремушкинская,17</span>
                                 </div>
                                 <div class="design-slide__text">
                                     Дизайн в светло-серых оттенках с бронзовыми элементами.
@@ -587,19 +589,13 @@
                                 </div>
                             </div>
                             <div class="design-slide__video">
-                                <iframe src="https://www.youtube.com/embed/wEBpDcFxpTM" frameborder="0" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/wEBpDcFxpTM" frameborder="0" allowfullscreen loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>
-                    <div class="design-slide__info">
-                        <div class="design-slide__address">
-                            <img src="img/base/map.png" alt="">
-                            <span class="text">г.Москва ЖК Новочеремушкинская,17</span>
-                        </div>
-                        <div class="design-slide__rooms">
-                            <span class="number">2</span>
-                            <span class="text">комнатная</span>
-                        </div>
+                    <div class="design-slide__rooms">
+                        <span class="number">2</span>
+                        <span class="text">комнатная</span>
                     </div>
                 </div>
                 <div class="design-slide swiper-slide">
@@ -646,26 +642,24 @@
                         <div class="container">
                             <div class="design-slide__content">
                                 <div class="design-slide__title h3">
-                                    <span>ЖК Резиденции Архитекторов</span>
+                                    ЖК Резиденции Архитекторов
+                                </div>
+                                <div class="design-slide__address">
+                                    <img src="img/base/map.png" alt="">
+                                    <span class="text">г.Москва. ЖК Резиденции Архитекторов</span>
                                 </div>
                                 <div class="design-slide__text">
                                     Просторная и светлая квартира с большими окнами, выходящими на набережную, двумя санузлами с необычной отделкой и отдельной гардеробной.
                                 </div>
                             </div>
                             <div class="design-slide__video">
-                                <iframe src="https://www.youtube.com/embed/_-1AATjErM8" frameborder="0" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/_-1AATjErM8" frameborder="0" allowfullscreen loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>
-                    <div class="design-slide__info">
-                        <div class="design-slide__address">
-                            <img src="img/base/map.png" alt="">
-                            <span class="text">г.Москва. ЖК Резиденции Архитекторов</span>
-                        </div>
-                        <div class="design-slide__rooms">
-                            <span class="number">2</span>
-                            <span class="text">комнатная</span>
-                        </div>
+                    <div class="design-slide__rooms">
+                        <span class="number">2</span>
+                        <span class="text">комнатная</span>
                     </div>
                 </div>
                 <div class="design-slide swiper-slide">
@@ -707,7 +701,11 @@
                         <div class="container">
                             <div class="design-slide__content">
                                 <div class="design-slide__title h3">
-                                    <span>Ленинский проспект</span>
+                                    Ленинский проспект
+                                </div>
+                                <div class="design-slide__address">
+                                    <img src="img/base/map.png" alt="">
+                                    <span class="text">г.Москва, Ленинский проспект, д.109</span>
                                 </div>
                                 <div class="design-slide__text">
                                     Дизайн в белых оттенках и золотыми акцентами.
@@ -716,19 +714,13 @@
                                 </div>
                             </div>
                             <div class="design-slide__video">
-                                <iframe src="https://www.youtube.com/embed/AHyrq541O5Y" frameborder="0" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/AHyrq541O5Y" frameborder="0" allowfullscreen loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>
-                    <div class="design-slide__info">
-                        <div class="design-slide__address">
-                            <img src="img/base/map.png" alt="">
-                            <span class="text">г.Москва, Ленинский проспект, д.109</span>
-                        </div>
-                        <div class="design-slide__rooms">
-                            <span class="number">2</span>
-                            <span class="text">комнатная</span>
-                        </div>
+                    <div class="design-slide__rooms">
+                        <span class="number">2</span>
+                        <span class="text">комнатная</span>
                     </div>
                 </div>
                 <div class="design-slide swiper-slide">
@@ -768,7 +760,11 @@
                         <div class="container">
                             <div class="design-slide__content">
                                 <div class="design-slide__title h3">
-                                    <span>Озерковская набережная</span>
+                                    Озерковская набережная
+                                </div>
+                                <div class="design-slide__address">
+                                    <img src="img/base/map.png" alt="">
+                                    <span class="text">г. Москва, Озерковская набережная </span>
                                 </div>
                                 <div class="design-slide__text">
                                     Проект этой квартиры мы выполнили в современном стиле, добавив некоторые элементы из лофта.
@@ -777,19 +773,13 @@
                                 </div>
                             </div>
                             <div class="design-slide__video">
-                                <iframe src="https://www.youtube.com/embed/CQKMvoqOLoY" frameborder="0" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/CQKMvoqOLoY" frameborder="0" allowfullscreen loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>
-                    <div class="design-slide__info">
-                        <div class="design-slide__address">
-                            <img src="img/base/map.png" alt="">
-                            <span class="text">г. Москва, Озерковская набережная </span>
-                        </div>
-                        <div class="design-slide__rooms">
-                            <span class="number">2</span>
-                            <span class="text">комнатная</span>
-                        </div>
+                    <div class="design-slide__rooms">
+                        <span class="number">2</span>
+                        <span class="text">комнатная</span>
                     </div>
                 </div>
             </div>
