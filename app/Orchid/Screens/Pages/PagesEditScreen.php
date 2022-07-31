@@ -97,8 +97,12 @@ class PagesEditScreen extends Screen
                     Input::make('h1_subtitle')
                          ->title('Подзаголовок'),
                 ]),
-                Upload::make('pdf_file')
-                    ->title('PDF презентация'),
+                Group::make([
+                    Upload::make('pdf_file')
+                        ->title('PDF презентация'),
+                    Upload::make('xls_file')
+                        ->title('Excel смета'),
+                ]),
                 Matrix::make('advantages_1')
                       ->title('Преимущества 1')
                       ->columns([

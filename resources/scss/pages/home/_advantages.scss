@@ -61,6 +61,13 @@
     padding-left: 30px;
     margin-bottom: 16px;
 
+    @include media-down(sm) {
+      transform: scale(0.6);
+      left: -20px;
+      top: -20px;
+      margin-bottom: -20px;
+    }
+
     &:before {
       content: '';
       position: absolute;

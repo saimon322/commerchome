@@ -14,7 +14,11 @@
 
   @include media-up(md) {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 50px 40px;
+    grid-gap: 30px;
+  }
+
+  @include media-up(lg) {
+    grid-gap: 40px;
   }
 }
 
@@ -80,6 +84,8 @@
   }
 
   &__btn {
+    position: relative;
+    bottom: -1px;
     padding: 5px;
     min-width: unset;
     margin-left: 10px;

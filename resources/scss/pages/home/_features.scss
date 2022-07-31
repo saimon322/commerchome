@@ -1,5 +1,4 @@
 .features {
-  min-height: 100vh;
   background: url(../../../img/base/bg.jpg) center / cover no-repeat;
 
   @include media-up(md) {
@@ -25,6 +24,12 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  .features-list {
+    @include media-up(xl) {
+      justify-content: space-evenly;
     }
   }
 

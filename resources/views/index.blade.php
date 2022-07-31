@@ -87,7 +87,7 @@
     <section class="hero section" id="hero">
         <div class="container">
             <div class="hero__content">
-                <div class="wow fadeInUp" data-wow-delay="500">
+                <div class="wow fadeInUp" data-wow-delay="200">
                     <h1 class="hero__title">
                         {!!$data['h1']!!}
                     </h1>
@@ -95,7 +95,7 @@
                         {!!$data['h1_subtitle']!!}
                     </div>
                 </div>
-                <form action="#" class="hero__form wow fadeInUp" data-wow-delay="800">
+                <form action="#" class="hero__form wow fadeInUp" data-wow-delay="400">
                     <input
                             type="text"
                             name="phone"
@@ -682,7 +682,6 @@
                             <div class="swiper-slide"><img src="img/slider/projects/leninsky-15.jpg" alt="" loading="lazy"></div>
                             <div class="swiper-slide"><img src="img/slider/projects/leninsky-16.jpg" alt="" loading="lazy"></div>
                             <div class="swiper-slide"><img src="img/slider/projects/leninsky-17.jpg" alt="" loading="lazy"></div>
-                            <div class="swiper-slide"><img src="img/slider/projects/leninsky-18.jpg" alt="" loading="lazy"></div>
                         </div>
                         <div class="swiper-navigation">
                             <button class="swiper-btn gallery-btn-prev">
@@ -889,7 +888,7 @@
         </div>
         <div class="management__content">
             <div class="container">
-                <div class="wow fadeInUp" data-wow-delay="500">
+                <div class="wow fadeInUp" data-wow-delay="200">
                     <h1 class="management__title">
                         Доверительное управление <span>и аренда</span>
                     </h1>
@@ -897,7 +896,7 @@
                         Вашей жилой недвижимости
                     </div>
                 </div>
-                <form action="#" class="management__form wow fadeInUp" data-wow-delay="800">
+                <form action="#" class="management__form wow fadeInUp" data-wow-delay="400">
                     <input
                             type="text"
                             name="phone"

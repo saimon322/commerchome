@@ -192,14 +192,14 @@ select {
 }
 
 .section {
-  padding: 50px 0;
+  padding: 60px 0;
 
   @include media-up(md) {
-    padding: 70px 0;
+    padding: 100px 0;
   }
 
   @include media-up(lg) {
-    padding: 90px 0;
+    padding: 120px 0;
   }
 }
 

@@ -2,7 +2,7 @@
   position: relative;
 
   @include media-up(lg) {
-    min-height: 100vh;
+    min-height: 120vh;
   }
 
   @include media-down(sm) {
@@ -123,18 +123,17 @@
       position: absolute;
       z-index: 1;
       right: 0;
-      top: 70px;
+      top: 120px;
       width: 45vw;
-      height: calc(100% - 140px);
+      height: calc(100% - 240px);
     }
 
     @include media-up(xl) {
       position: absolute;
       z-index: 1;
       right: 0;
-      top: 90px;
+      top: 120px;
       width: 60vw;
-      height: calc(100% - 180px);
     }
 
     img {
