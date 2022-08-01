@@ -21,6 +21,7 @@ mix.setPublicPath('public')
         'img/svg-sprite', // The output path for the sprite
         {}
     )
+    .copy('resources/files/', 'public/files')
     .copy('resources/img/', 'public/img')
     .copy('resources/fonts/**/*', 'public/fonts')
     .copy('resources/css/*', 'public/css');

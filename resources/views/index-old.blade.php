@@ -111,6 +111,7 @@
             <img src="img/base/hero.jpg" alt="">
         </div>
     </section>
+
     <section class="about section" id="about">
         <div class="container">
             <div class="features-list">
@@ -138,6 +139,7 @@
             @endif
         </div>
     </section>
+
     <section class="advantages section" id="advantages">
         <div class="container">
             <div class="advantages__header">
@@ -159,6 +161,7 @@
             </div>
         </div>
     </section>
+
     <section class="design section" id="design">
         <div class="design__header">
             <div class="container">
@@ -284,6 +287,7 @@
             </div>
         </div>
     </section>
+
     <section class="request section">
         <div class="container section-container">
             <h2 class="big-title">Оставьте заявку</h2>
@@ -366,6 +370,160 @@
             </form>
         </div>
     </section>
+
+    <section class="calc section">
+        <div class="container section-container">
+            <h2 class="big-title">Расчитать стоимость</h2>
+            <img src="img/base/logo-white.png" alt="" class="section-logo">
+            <div class="calc__form">
+                <div class="calc__item">
+                    <span>Город:</span>
+                    <select name="calc-city">
+                        <option value="Багратионовск">Багратионовск</option>
+                        <option value="Балтийск">Балтийск</option>
+                        <option value="Гвардейск">Гвардейск</option>
+                        <option value="Гурьевск">Гурьевск</option>
+                        <option value="Гусев">Гусев</option>
+                        <option value="Зеленоградск">Зеленоградск</option>
+                        <option value="Калининград" selected>Калининград</option>
+                        <option value="Краснознаменск">Краснознаменск</option>
+                        <option value="Ладушкин">Ладушкин</option>
+                        <option value="Малые города">Малые города</option>
+                        <option value="Неман">Неман</option>
+                        <option value="Нестеров">Нестеров</option>
+                        <option value="Озёрск">Озёрск</option>
+                        <option value="Пионерский">Пионерский</option>
+                        <option value="Полесск">Полесск</option>
+                        <option value="Правдинск">Правдинск</option>
+                        <option value="Приморск">Приморск</option>
+                        <option value="Светлогорск">Светлогорск</option>
+                        <option value="Светлый">Светлый</option>
+                        <option value="Славск">Славск</option>
+                        <option value="Советск">Советск</option>
+                        <option value="Черняховск">Черняховск</option>
+                    </select>
+                </div>
+                <div class="calc__item">
+                    <span>Количество комнат:</span>
+                    <select name="calc-rooms">
+                        <option value="1 комната">1 комната</option>
+                        <option value="Студия">Студия</option>
+                        <option value="2 комнаты">2 комнаты</option>
+                        <option value="Евро двухкомнатная">Евро двухкомнатная</option>
+                        <option value="3 комнаты">3 комнаты</option>
+                        <option value="4 комнаты">4 комнаты</option>
+                        <option value="5 комнат">5 комнат</option>
+                    </select>
+                </div>
+                <div class="calc__item">
+                    <span>Стиль дизайна:</span>
+                    <select name="calc-design">
+                        <option value="Модернизм">Модернизм</option>
+                        <option value="Контемпорари">Контемпорари</option>
+                        <option value="Скандинавский">Скандинавский</option>
+                    </select>
+                </div>
+                <div class="calc__item">
+                    <span>Мебель</span>
+                    <select name="calc-furniture">
+                        <option value="Нужна">Нужна</option>
+                        <option value="Нет">Нет</option>
+                    </select>
+                </div>
+                <div class="calc__item">
+                    <span>Общая площадь квартиры:</span>
+                    <input type="text" name="calc-area" placeholder=" м2">
+                </div>
+                <div class="calc__item">
+                    <span>Бытовая техника:</span>
+                    <select name="calc-appliances">
+                        <option value="Нужна">Нужна</option>
+                        <option value="Нет">Нет</option>
+                    </select>
+                </div>
+                <div class="calc__item">
+                    <span>Высота потолков:</span>
+                    <select name="calc-ceiling">
+                        <option value="2.5 м">2.5 м</option>
+                        <option value="2.7 м">2.7 м</option>
+                        <option value="3 м">3 м</option>
+                        <option value="3.5 м">3.5 м</option>
+                    </select>
+                </div>
+                <div class="calc__item">
+                    <span>Доверительное управление:</span>
+                    <select name="calc-management">
+                        <option value="Нужно">Нужно</option>
+                        <option value="Нет">Нет</option>
+                    </select>
+                </div>
+                <div class="calc__total">
+                    <span class="calc__total-title">Стоимость ремонта от:</span>
+                    <span class="calc__total-price"></span>
+                    <div class="calc__total-btn btn">Расcчитать стоимость</div>
+                </div>
+            </div>
+            <div class="calc__hint">
+                Посчитанная стоимость является приблизительной
+                и&nbsp;нуждается в уточнении и корректировки,
+                с&nbsp;учетом особенностей вашего объекта.
+            </div>
+            @if($data['xls_file'])
+                <a href="{{Orchid\Attachment\Models\Attachment::where('id', $data['xls_file'])->first()->url()}}"
+                class="calc__download wow fadeInUp"
+                download>
+                    <svg width="168" height="108">
+                        <use xlink:href="#download"></use>
+                    </svg>
+                    <span>
+                        скачайте смету <span>в формате .xlsx</span>
+                    </span>
+                    <img src="img/base/imac.png" loading="lazy" alt="">
+                </a>
+            @endif
+        </div>
+    </section>
+
+    <section class="messages section">
+        <div class="container">
+            <div class="messages__wrapper">
+                <div class="messages__content">
+                    <h2 class="messages__title">
+                        Если у вас остались вопросы
+                    </h2>
+                    <div class="messages__list">
+                        <a href="tel:+74958222202"
+                        class="messages__item">
+                            <svg width="46" height="46">
+                                <use xlink:href="#phone"></use>
+                            </svg>
+                            <span>позвоните нам</span>
+                        </a>
+                        <a href="https://wa.me/+79210770330?text=Здравствуйте.%20Подскажите%20пожалуйста:"
+                        class="messages__item"
+                        target="_blank">
+                            <svg width="60" height="60">
+                                <use xlink:href="#whatsapp"></use>
+                            </svg>
+                            <span>напишите в Whatsap</span>
+                        </a>
+                        <a href="https://t.me/commercreal"
+                        class="messages__item"
+                        target="_blank">
+                            <svg width="55" height="49">
+                                <use xlink:href="#telegram"></use>
+                            </svg>
+                            <span>или Telegram</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="messages__img">
+                    <img src="img/base/messages.png" loading="lazy" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="management section" id="management">
         <div class="management__banner">
             <div class="container">
@@ -399,6 +557,7 @@
             <img src="img/base/family-1.jpg" alt="">
         </div>
     </section>
+
     <section class="features section">
         <div class="container">
             <div class="features-list">
@@ -417,6 +576,7 @@
             </div>
         </div>
     </section>
+
     <section class="contacts section" id="contacts">
         <div class="container section-container">
             <h2 class="big-title">Контакты</h2>
@@ -497,6 +657,7 @@
         </div>
     </section>
 </main>
+
 <footer class="footer">
     <div class="footer__content container">
         <div class="footer__copy">© Commerc real Home</div>
@@ -556,7 +717,9 @@
         <img src="https://mc.yandex.ru/watch/88122684" style="position:absolute; left:-9999px;" alt=""/>
     </div>
 </noscript>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/app.js"></script>
+
 </body>
 </html>

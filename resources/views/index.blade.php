@@ -126,17 +126,17 @@
                 @endforeach
             </div>
             <div class="about__img">
-                <img src="img/base/plan.jpg" alt="">
+                <img src="img/base/plan.jpg" loading="lazy" alt="">
             </div>
-            @if($data['xls_file'])
-                <a href="{{Orchid\Attachment\Models\Attachment::where('id', $data['xls_file'])->first()->url()}}" download class="about__pdf wow fadeInUp">
-                    <svg width="174" height="174">
-                        <use xlink:href="#pdf"></use>
-                    </svg>
-                    <span>скачай презентацию</span>
-                    <img src="img/base/magazines-1.png" alt="">
-                </a>
-            @endif
+            <a href="files/Commerc-Real-Home.pdf"
+               class="about__pdf wow fadeInUp"
+               download>
+                <svg width="174" height="174">
+                    <use xlink:href="#pdf"></use>
+                </svg>
+                <span>скачай презентацию</span>
+                <img src="img/base/magazines-1.png" loading="lazy" alt="">
+            </a>
         </div>
     </section>
 
@@ -213,7 +213,7 @@
                                     <span class="number">1</span>
                                     <span class="text">комнатная</span>
                                 </div>
-                                <img src="img/slider/styles/scand-1-plan.png" alt="">
+                                <img src="img/slider/styles/scand-1-plan.png" loading="lazy" alt="">
                             </div>
                         </div>
                     </div>
@@ -256,7 +256,7 @@
                                     <span class="number">1</span>
                                     <span class="text">комнатная</span>
                                 </div>
-                                <img src="img/slider/styles/modern-1-plan.png" alt="">
+                                <img src="img/slider/styles/modern-1-plan.png" loading="lazy" alt="">
                             </div>
                         </div>
                     </div>
@@ -299,7 +299,7 @@
                                     <span class="number">1</span>
                                     <span class="text">комнатная</span>
                                 </div>
-                                <img src="img/slider/styles/contemporary-1-plan.png" alt="">
+                                <img src="img/slider/styles/contemporary-1-plan.png" loading="lazy" alt="">
                             </div>
                         </div>
                     </div>
@@ -346,7 +346,7 @@
                                     <span class="number">2</span>
                                     <span class="text">комнатная</span>
                                 </div>
-                                <img src="img/slider/styles/scand-2-plan.png" alt="">
+                                <img src="img/slider/styles/scand-2-plan.png" loading="lazy" alt="">
                             </div>
                         </div>
                     </div>
@@ -389,7 +389,7 @@
                                     <span class="number">2</span>
                                     <span class="text">комнатная</span>
                                 </div>
-                                <img src="img/slider/styles/modern-2-plan.png" alt="">
+                                <img src="img/slider/styles/modern-2-plan.png" loading="lazy" alt="">
                             </div>
                         </div>
                     </div>
@@ -432,7 +432,7 @@
                                     <span class="number">2</span>
                                     <span class="text">комнатная</span>
                                 </div>
-                                <img src="img/slider/styles/contemporary-2-plan.png" alt="">
+                                <img src="img/slider/styles/contemporary-2-plan.png" loading="lazy" alt="">
                             </div>
                         </div>
                     </div>
@@ -455,17 +455,17 @@
 
         <div class="design__pdf">
             <div class="container">
-                @if($data['xls_file'])
-                    <a href="{{Orchid\Attachment\Models\Attachment::where('id', $data['xls_file'])->first()->url()}}" download class="design__pdf-link wow fadeInUp">
-                        <svg width="174" height="174">
-                            <use xlink:href="#pdf"></use>
-                        </svg>
-                        <span>
-                            <span>скачайте презентацию</span> все о дизайне и ремонте
-                        </span>
-                    </a>
-                    <img src="img/base/magazines-2.png" alt="" loading="lazy">
-                @endif
+                <a href="files/Commerc-Real-Home.pdf"
+                   class="design__pdf-link wow fadeInUp"
+                   download>
+                    <svg width="174" height="174">
+                        <use xlink:href="#pdf"></use>
+                    </svg>
+                    <span>
+                        <span>скачайте презентацию</span> все о дизайне и ремонте
+                    </span>
+                </a>
+                <img src="img/base/magazines-2.png" alt="" loading="lazy">
             </div>
         </div>
 
@@ -523,7 +523,7 @@
                                     ЖК ДАДАЕВСКИЙ
                                 </div>
                                 <div class="design-slide__address">
-                                    <img src="img/base/map.png" alt="">
+                                    <img src="img/base/map.png" loading="lazy" alt="">
                                     <span class="text">г.Москва ул. Татарена, дом 9в </span>
                                 </div>
                                 <div class="design-slide__text">
@@ -582,7 +582,7 @@
                                     ЖК Новочеремушкинская
                                 </div>
                                 <div class="design-slide__address">
-                                    <img src="img/base/map.png" alt="">
+                                    <img src="img/base/map.png" loading="lazy" alt="">
                                     <span class="text">г.Москва ЖК Новочеремушкинская,17</span>
                                 </div>
                                 <div class="design-slide__text">
@@ -648,7 +648,7 @@
                                     ЖК Резиденции Архитекторов
                                 </div>
                                 <div class="design-slide__address">
-                                    <img src="img/base/map.png" alt="">
+                                    <img src="img/base/map.png" loading="lazy" alt="">
                                     <span class="text">г.Москва. ЖК Резиденции Архитекторов</span>
                                 </div>
                                 <div class="design-slide__text">
@@ -706,7 +706,7 @@
                                     Ленинский проспект
                                 </div>
                                 <div class="design-slide__address">
-                                    <img src="img/base/map.png" alt="">
+                                    <img src="img/base/map.png" loading="lazy" alt="">
                                     <span class="text">г.Москва, Ленинский проспект, д.109</span>
                                 </div>
                                 <div class="design-slide__text">
@@ -765,7 +765,7 @@
                                     Озерковская набережная
                                 </div>
                                 <div class="design-slide__address">
-                                    <img src="img/base/map.png" alt="">
+                                    <img src="img/base/map.png" loading="lazy" alt="">
                                     <span class="text">г. Москва, Озерковская набережная </span>
                                 </div>
                                 <div class="design-slide__text">
@@ -898,19 +898,17 @@
                 и&nbsp;нуждается в уточнении и корректировки,
                 с&nbsp;учетом особенностей вашего объекта.
             </div>
-            @if($data['xls_file'])
-                <a href="{{Orchid\Attachment\Models\Attachment::where('id', $data['xls_file'])->first()->url()}}"
-                   class="calc__download wow fadeInUp"
-                   download>
-                    <svg width="168" height="108">
-                        <use xlink:href="#download"></use>
-                    </svg>
-                    <span>
-                        скачайте смету <span>в формате .xlsx</span>
-                    </span>
-                    <img src="img/base/imac.png" alt="">
-                </a>
-            @endif
+            <a href="files/Commerc-Real-Home.xlsx"
+                class="calc__download wow fadeInUp"
+                download>
+                <svg width="168" height="108">
+                    <use xlink:href="#download"></use>
+                </svg>
+                <span>
+                    скачайте смету <span>в формате .xlsx</span>
+                </span>
+                <img src="img/base/imac.png" loading="lazy" alt="">
+            </a>
         </div>
     </section>
 
@@ -948,7 +946,7 @@
                     </div>
                 </div>
                 <div class="messages__img">
-                    <img src="img/base/messages.png" alt="">
+                    <img src="img/base/messages.png" loading="lazy" alt="">
                 </div>
             </div>
         </div>
@@ -957,7 +955,7 @@
     <section class="management section" id="management">
         <div class="management__banner">
             <div class="container">
-                <img src="img/base/logo-white.png" alt="">
+                <img src="img/base/logo-white.png" loading="lazy" alt="">
                 Дополнительные<br> услуги компании
             </div>
         </div>
@@ -984,7 +982,7 @@
             </div>
         </div>
         <div class="management__img wow">
-            <img src="img/base/family-1.jpg" alt="">
+            <img src="img/base/family-1.jpg" loading="lazy" alt="">
         </div>
     </section>
 
@@ -1002,12 +1000,30 @@
                 @endforeach
             </div>
             <div class="features__img">
-                <img src="img/base/family-2.jpg" alt="">
+                <img src="img/base/family-2.jpg" loading="lazy" alt="">
             </div>
         </div>
     </section>
 
     <section class="faq section">
+        <div class="faq__pdf">
+            <div class="container">
+                <a href="files/Commerc-Real-Home.pdf"
+                   class="faq__pdf-link wow fadeInUp"
+                   download>
+                    <svg width="174" height="174">
+                        <use xlink:href="#pdf"></use>
+                    </svg>
+                    <span>
+                        скачайте презентацию
+                        <span>для застройщиков<br>
+                        и агенств недвижимости</span>
+                    </span>
+                </a>
+                <img src="img/base/magazines-3.png" alt="" loading="lazy">
+            </div>
+        </div>
+
         <div class="container section-container">
             <h2 class="faq__title">
                 часто задаваемые <span>вопросы</span>
@@ -1034,7 +1050,7 @@
                     </div>
                     <div class="faq-item__content">
                         <div class="faq-item__text">
-                            Это  передача собственником своего имущества по договору доверительного управления управляющему, который будет управлять имуществом в интересах собственника, на долгосрочной основе за вознаграждение или на договорных условиях.
+                            Это передача собственником своего имущества по договору доверительного управления управляющему, который будет управлять имуществом в интересах собственника, на долгосрочной основе за вознаграждение или на договорных условиях.
                         </div>
                     </div>
                 </div>
@@ -1044,7 +1060,7 @@
                     </div>
                     <div class="faq-item__content">
                         <div class="faq-item__text">
-                            <p>К сожалению мы не осуществляем ремонт и доверительное управление во вторичном жилье. Мы специализируемся на модульном ремонте под ключ в новостройках. </p>
+                            <p>К сожалению, мы не осуществляем ремонт и доверительное управление во вторичном жилье. Мы специализируемся на модульном ремонте под ключ в новостройках. </p>
                             <p>Мы даем гарантию не только на работы, но и на более чем 70% всех элементов дизайна, мебели и техники.</p>
                             <p>А так же при заключении договора о доверительном управлении жилой недвижимостью, осуществляем за свой счет замену всех элементов дизайна мебели и техники и проводим косметический ремонт. </p>
                         </div>
@@ -1069,7 +1085,7 @@
                         <div class="faq-item__text">
                             <p>Модульный ремонт это идеальный способ сделать качественный ремонт удаленно. Готовые решения упрощают выбор и удаленное согласование, и сокращают бюджет ремонта.</p>
                             <p>Готовые продуманные до мелочей интерьерные решения, проверенные во множестве проектов, качественные материалы, мебели и техника. Все это дает гарантию качества ремонта, в котором будет комфортно жить.</p>
-                            <p>Мы все сделаем за вас. По завершению ремонта можете принять работу и сразу же заехать в квартиру.</p>
+                            <p>Мы все сделаем за вас. По завершению ремонта можете принять работу и сразу заехать в квартиру.</p>
                             <p><i>Этапы удалённого ремонта:</i></p>
                             <ol>
                                 <li>Выбор одного варианта дизайна интерьера.</li>
