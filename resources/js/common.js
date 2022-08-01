@@ -6,6 +6,7 @@ import anchorScroll from './components/anchor-scroll';
 import textarea from './components/textarea';
 import wow from './components/wow';
 import sliders from './components/sliders';
+import calc from "./components/calc";
 import forms from './components/forms';
 import form from "./form";
 
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileMenu();
     wow();
     sliders();
+    calc();
     forms();
     form();
 })

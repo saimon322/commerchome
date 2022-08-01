@@ -6,3 +6,4 @@ import '../img/svg-sprite/email.svg';
 import '../img/svg-sprite/globus.svg';
 import '../img/svg-sprite/pdf.svg';
 import '../img/svg-sprite/arrow.svg';
+import '../img/svg-sprite/download.svg';

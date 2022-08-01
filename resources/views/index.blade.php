@@ -111,6 +111,7 @@
             <img src="img/base/hero.jpg" alt="">
         </div>
     </section>
+
     <section class="about section" id="about">
         <div class="container">
             <div class="features-list">
@@ -127,8 +128,8 @@
             <div class="about__img">
                 <img src="img/base/plan.jpg" alt="">
             </div>
-            @if($data['pdf_file'])
-                <a href="{{Orchid\Attachment\Models\Attachment::where('id', $data['pdf_file'])->first()->url()}}" download class="about__pdf wow fadeInUp">
+            @if($data['xls_file'])
+                <a href="{{Orchid\Attachment\Models\Attachment::where('id', $data['xls_file'])->first()->url()}}" download class="about__pdf wow fadeInUp">
                     <svg width="174" height="174">
                         <use xlink:href="#pdf"></use>
                     </svg>
@@ -138,6 +139,7 @@
             @endif
         </div>
     </section>
+
     <section class="advantages section" id="advantages">
         <div class="container">
             <div class="advantages__header">
@@ -159,6 +161,7 @@
             </div>
         </div>
     </section>
+
     <section class="design section" id="design">
         <div class="design__header">
             <div class="container">
@@ -452,8 +455,8 @@
 
         <div class="design__pdf">
             <div class="container">
-                @if($data['pdf_file'])
-                    <a href="{{Orchid\Attachment\Models\Attachment::where('id', $data['pdf_file'])->first()->url()}}" download class="design__pdf-link wow fadeInUp">
+                @if($data['xls_file'])
+                    <a href="{{Orchid\Attachment\Models\Attachment::where('id', $data['xls_file'])->first()->url()}}" download class="design__pdf-link wow fadeInUp">
                         <svg width="174" height="174">
                             <use xlink:href="#pdf"></use>
                         </svg>
@@ -797,88 +800,120 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
-    <section class="request section">
+
+    <section class="calc section">
         <div class="container section-container">
-            <h2 class="big-title">Оставьте заявку</h2>
+            <h2 class="big-title">Расчитать стоимость</h2>
             <img src="img/base/logo-white.png" alt="" class="section-logo">
-            <form action="#" class="form request-form">
-                <div class="form-wrapper">
-                    <div class="form-field">
-                        <input type="text" name="name" placeholder="Имя*" required>
-                    </div>
-                    <div class="form-field">
-                        <input
-                                type="text"
-                                name="phone"
-                                placeholder="Номер телефона*"
-                                minlength="16"
-                                maxlength="16"
-                                required>
-                    </div>
-                    <div class="form-field">
-                        <select name="city">
-                            <option disabled selected>Город</option>
-                            <option value="Багратионовск">Багратионовск</option>
-                            <option value="Балтийск">Балтийск</option>
-                            <option value="Гвардейск">Гвардейск</option>
-                            <option value="Гурьевск">Гурьевск</option>
-                            <option value="Гусев">Гусев</option>
-                            <option value="Зеленоградск">Зеленоградск</option>
-                            <option value="Калининград">Калининград</option>
-                            <option value="Краснознаменск">Краснознаменск</option>
-                            <option value="Ладушкин">Ладушкин</option>
-                            <option value="Мамоново">Мамоново</option>
-                            <option value="Неман">Неман</option>
-                            <option value="Нестеров">Нестеров</option>
-                            <option value="Озёрск">Озёрск</option>
-                            <option value="Пионерский">Пионерский</option>
-                            <option value="Полесск">Полесск</option>
-                            <option value="Правдинск">Правдинск</option>
-                            <option value="Приморск">Приморск</option>
-                            <option value="Светлогорск">Светлогорск</option>
-                            <option value="Светлый">Светлый</option>
-                            <option value="Советск">Советск</option>
-                            <option value="Черняховск">Черняховск</option>
-                        </select>
-                    </div>
-                    <div class="form-field">
-                        <select name="rooms">
-                            <option disabled selected>Комнат в квартире</option>
-                            <option value="Студия">Студия</option>
-                            <option value="1-комнатная">1-комнатная</option>
-                            <option value="2-комнатная">2-комнатная</option>
-                            <option value="3-комнатная">3-комнатная</option>
-                            <option value="4-комнатная">4-комнатная</option>
-                            <option value="5-комнатная">5-комнатная</option>
-                        </select>
-                    </div>
-                    <div class="form-field">
-                        <select name="design">
-                            <option disabled selected>Стиль дизайна</option>
-                            <option value="Скандинавский">Скандинавский</option>
-                            <option value="Контемпорари">Контемпорари</option>
-                            <option value="Модернизм">Модернизм</option>
-                            <option value="Не знаю">Не знаю</option>
-                        </select>
-                    </div>
-                    <div class="form-field">
-                        <select name="management">
-                            <option disabled selected>Доверительное управление</option>
-                            <option value="Да">Да</option>
-                            <option value="Нет">Нет</option>
-                            <option value="Не знаю">Не знаю</option>
-                        </select>
-                    </div>
-                    <div class="form-field form-field--w100">
-                        <div class="textarea-autosize">
-                            <textarea name="message" placeholder="Ваше сообщение"></textarea>
-                        </div>
-                    </div>
+            <div class="calc__form">
+                <div class="calc__item">
+                    <span>Город:</span>
+                    <select name="calc-city">
+                        <option value="Багратионовск">Багратионовск</option>
+                        <option value="Балтийск">Балтийск</option>
+                        <option value="Гвардейск">Гвардейск</option>
+                        <option value="Гурьевск">Гурьевск</option>
+                        <option value="Гусев">Гусев</option>
+                        <option value="Зеленоградск">Зеленоградск</option>
+                        <option value="Калининград" selected>Калининград</option>
+                        <option value="Краснознаменск">Краснознаменск</option>
+                        <option value="Ладушкин">Ладушкин</option>
+                        <option value="Малые города">Малые города</option>
+                        <option value="Неман">Неман</option>
+                        <option value="Нестеров">Нестеров</option>
+                        <option value="Озёрск">Озёрск</option>
+                        <option value="Пионерский">Пионерский</option>
+                        <option value="Полесск">Полесск</option>
+                        <option value="Правдинск">Правдинск</option>
+                        <option value="Приморск">Приморск</option>
+                        <option value="Светлогорск">Светлогорск</option>
+                        <option value="Светлый">Светлый</option>
+                        <option value="Славск">Славск</option>
+                        <option value="Советск">Советск</option>
+                        <option value="Черняховск">Черняховск</option>
+                    </select>
                 </div>
-                <button type="submit" class="btn">Отправить</button>
-            </form>
+                <div class="calc__item">
+                    <span>Количество комнат:</span>
+                    <select name="calc-rooms">
+                        <option value="1 комната">1 комната</option>
+                        <option value="Студия">Студия</option>
+                        <option value="2 комнаты">2 комнаты</option>
+                        <option value="Евро двухкомнатная">Евро двухкомнатная</option>
+                        <option value="3 комнаты">3 комнаты</option>
+                        <option value="4 комнаты">4 комнаты</option>
+                        <option value="5 комнат">5 комнат</option>
+                    </select>
+                </div>
+                <div class="calc__item">
+                    <span>Стиль дизайна:</span>
+                    <select name="calc-design">
+                        <option value="Модернизм">Модернизм</option>
+                        <option value="Контемпорари">Контемпорари</option>
+                        <option value="Скандинавский">Скандинавский</option>
+                    </select>
+                </div>
+                <div class="calc__item">
+                    <span>Мебель</span>
+                    <select name="calc-furniture">
+                        <option value="Нужна">Нужна</option>
+                        <option value="Нет">Нет</option>
+                    </select>
+                </div>
+                <div class="calc__item">
+                    <span>Общая площадь квартиры:</span>
+                    <input type="text" name="calc-area" placeholder=" м2">
+                </div>
+                <div class="calc__item">
+                    <span>Бытовая техника:</span>
+                    <select name="calc-appliances">
+                        <option value="Нужна">Нужна</option>
+                        <option value="Нет">Нет</option>
+                    </select>
+                </div>
+                <div class="calc__item">
+                    <span>Высота потолков:</span>
+                    <select name="calc-ceiling">
+                        <option value="2.5 м">2.5 м</option>
+                        <option value="2.7 м">2.7 м</option>
+                        <option value="3 м">3 м</option>
+                        <option value="3.5 м">3.5 м</option>
+                    </select>
+                </div>
+                <div class="calc__item">
+                    <span>Доверительное управление:</span>
+                    <select name="calc-management">
+                        <option value="Нужно">Нужно</option>
+                        <option value="Нет">Нет</option>
+                    </select>
+                </div>
+                <div class="calc__total">
+                    <span class="calc__total-title">Стоимость ремонта от:</span>
+                    <span class="calc__total-price"></span>
+                    <div class="calc__total-btn btn">Расcчитать стоимость</div>
+                </div>
+            </div>
+            <div class="calc__hint">
+                Посчитанная стоимость является приблизительной
+                и&nbsp;нуждается в уточнении и корректировки,
+                с&nbsp;учетом особенностей вашего объекта.
+            </div>
+            @if($data['xls_file'])
+                <a href="{{Orchid\Attachment\Models\Attachment::where('id', $data['xls_file'])->first()->url()}}"
+                   class="calc__download wow fadeInUp"
+                   download>
+                    <svg width="168" height="108">
+                        <use xlink:href="#download"></use>
+                    </svg>
+                    <span>
+                        скачайте смету <span>в формате .xlsx</span>
+                    </span>
+                    <img src="img/base/imac.png" alt="">
+                </a>
+            @endif
         </div>
     </section>
+
     <section class="management section" id="management">
         <div class="management__banner">
             <div class="container">
@@ -912,6 +947,7 @@
             <img src="img/base/family-1.jpg" alt="">
         </div>
     </section>
+
     <section class="features section">
         <div class="container">
             <div class="features-list">
@@ -930,6 +966,7 @@
             </div>
         </div>
     </section>
+
     <section class="contacts section" id="contacts">
         <div class="container section-container">
             <h2 class="big-title">Контакты</h2>
@@ -1010,6 +1047,7 @@
         </div>
     </section>
 </main>
+
 <footer class="footer">
     <div class="footer__content container">
         <div class="footer__copy">© Commerc real Home</div>
@@ -1046,6 +1084,7 @@
         </div>
     </div>
 </footer><!-- / .footer -->
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (m, e, t, r, i, k, a) {
@@ -1069,7 +1108,9 @@
         <img src="https://mc.yandex.ru/watch/88122684" style="position:absolute; left:-9999px;" alt=""/>
     </div>
 </noscript>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/app.js"></script>
+
 </body>
 </html>
