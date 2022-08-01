@@ -7,6 +7,7 @@ import textarea from './components/textarea';
 import wow from './components/wow';
 import sliders from './components/sliders';
 import calc from "./components/calc";
+import faq from "./components/faq";
 import forms from './components/forms';
 import form from "./form";
 
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     wow();
     sliders();
     calc();
+    faq();
     forms();
     form();
 })

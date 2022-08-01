@@ -1,0 +1,108 @@
+.faq {
+  .container {
+    max-width: 1300px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include media-up(md) {
+      margin-bottom: 80px;
+    }
+
+    span {
+      display: block;
+      color: $yellow;
+    }
+  }
+
+  .section-logo {
+    left: auto;
+    right: 16px;
+
+    @include media-up(md) {
+      right: 30px;
+    }
+
+    @include media-up(xl) {
+      right: 50px;
+    }
+  }
+}
+
+.faq-item {
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $blue;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include media-up(md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 16px;
+    height: 12px;
+    background: url(../../../img/icon/faq-bg.svg) center / contain no-repeat;
+    transition: transform .25s;
+
+    @include media-up(lg) {
+      top: 0;
+      width: 22px;
+      height: 16px;
+    }
+  }
+
+  &.active:before {
+    transform: rotate(180deg);
+  }
+
+  &__title {
+    position: relative;
+    color: $blue;
+    cursor: pointer;
+    padding-right: 20px;
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease-out;
+  }
+
+  &__text {
+    padding: 10px 0;
+    font-size: 16px;
+
+    @include media-up(md) {
+      padding: 20px 0;
+    }
+
+    @include media-up(lg) {
+      font-size: 20px;
+    }
+
+    & > * {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    ol {
+      padding-left: 20px;
+      list-style-type: decimal;
+    }
+  }
+}
