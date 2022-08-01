@@ -914,6 +914,46 @@
         </div>
     </section>
 
+    <section class="messages section">
+        <div class="container">
+            <div class="messages__wrapper">
+                <div class="messages__content">
+                    <h2 class="messages__title">
+                        Если у вас остались вопросы
+                    </h2>
+                    <div class="messages__list">
+                        <a href="tel:+74958222202"
+                        class="messages__item">
+                            <svg width="46" height="46">
+                                <use xlink:href="#phone"></use>
+                            </svg>
+                            <span>позвоните нам</span>
+                        </a>
+                        <a href="https://wa.me/+79210770330?text=Здравствуйте.%20Подскажите%20пожалуйста:"
+                        class="messages__item"
+                        target="_blank">
+                            <svg width="60" height="60">
+                                <use xlink:href="#whatsapp"></use>
+                            </svg>
+                            <span>напишите в Whatsap</span>
+                        </a>
+                        <a href="https://t.me/commercreal"
+                        class="messages__item"
+                        target="_blank">
+                            <svg width="55" height="49">
+                                <use xlink:href="#telegram"></use>
+                            </svg>
+                            <span>или Telegram</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="messages__img">
+                    <img src="img/base/messages.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="management section" id="management">
         <div class="management__banner">
             <div class="container">
