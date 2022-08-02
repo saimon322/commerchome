@@ -18,7 +18,7 @@
     }
 
     @include media-up(xl) {
-      grid-gap: 110px;
+      grid-gap: 100px;
     }
 
     h2 {
@@ -91,19 +91,27 @@
 
   &__title {
     position: relative;
+    padding-left: 25px;
     font-family: $bebas;
     font-size: 24px;
     text-transform: uppercase;
     margin-bottom: 8px;
 
     &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
       content: counter(item)'.';
       color: $yellow;
-      margin-right: 10px;
     }
 
     @include media-up(lg) {
       font-size: 32px;
+    }
+
+    span {
+      display: block;
+      color: $yellow;
     }
   }
 
