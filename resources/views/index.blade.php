@@ -120,8 +120,8 @@
                         <div class="feature__icon">
                             <img src="{{$advantage['icon']}}" alt="icon">
                         </div>
-                        <h3 class="feature__title">{{$advantage['headline']}}</h3>
-                        <div class="feature__text">{{$advantage['text']}}</div>
+                        <h3 class="feature__title">{!! $advantage['headline'] !!}</h3>
+                        <div class="feature__text">{!! $advantage['text'] !!}</div>
                     </div>
                 @endforeach
             </div>
@@ -144,9 +144,7 @@
         <div class="container">
             <div class="advantages__header">
                 <h2><span>Этапы</span> работ</h2>
-                <p>Мы делаем стильный и современный модульный ремонт.<br>
-                    С последующим доверительным управлением и её эксплуатацией.<br>
-                    Мы замыкаем на себе все процессы ремонта и аренды.</p>
+                <p>Мы делаем современный модульный ремонт, в счет вашей ипотеки. А так же Вы можете приобрести квартиру с уже готовым модульным ремонтом у наших партнеров.</p>
             </div>
             <div class="advantages-grid">
                 @foreach($data['advantages_2'] as $advantage)
@@ -154,7 +152,7 @@
                         <div class="advantage__icon">
                             <img src="{{$advantage['icon']}}" alt="">
                         </div>
-                        <div class="advantage__title">{{$advantage['headline']}}</div>
+                        <div class="advantage__title">{!! $advantage['headline'] !!}</div>
                         <div class="advantage__text">{!! $advantage['text'] !!}</div>
                     </div>
                 @endforeach
@@ -994,8 +992,8 @@
                         <div class="feature__icon">
                             <img src="{{$advantage['icon']}}" alt="icon">
                         </div>
-                        <h3 class="feature__title">{{$advantage['headline']}}</h3>
-                        <div class="feature__text">{{$advantage['text']}}</div>
+                        <h3 class="feature__title">{!! $advantage['headline'] !!}</h3>
+                        <div class="feature__text">{!! $advantage['text'] !!}</div>
                     </div>
                 @endforeach
             </div>
